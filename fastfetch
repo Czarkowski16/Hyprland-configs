@@ -1,0 +1,57 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+        "padding": { "top": 2, "right": 4 }
+    },
+    "display": {
+        "separator": " 󰄾 ",
+        "color": { "keys": "magenta", "output": "white" },
+        "key": { "width": 18 }
+    },
+    "modules": [
+        { "type": "title", "color": { "user": "blue", "at": "white", "host": "cyan" } },
+        { "type": "custom", "format": "┠──────────────────────────────────┨" },
+        { "type": "os", "key": " 󰣇 SYSTEM", "keyColor": "blue" },
+        { "type": "kernel", "key": " 󰒋 KERNEL", "keyColor": "magenta" },
+        { "type": "packages", "key": " 󰏖 PACKS ", "keyColor": "yellow" },
+        { "type": "uptime", "key": " 󱎫 UPTIME", "keyColor": "red" },
+        { "type": "custom", "format": "┠──────────────────────────────────┨" },
+        { "type": "wm", "key": "  WINDOW", "keyColor": "blue" },
+        { "type": "theme", "key": " 󰉼 THEME ", "keyColor": "magenta" },
+        { "type": "terminal", "key": "  TERM  ", "keyColor": "green" },
+        { "type": "shell", "key": " 󱆃 SHELL ", "keyColor": "cyan" },
+        { "type": "custom", "format": "┠──────────────────────────────────┨" },
+        { 
+            "type": "cpu", 
+            "key": "  CPU   ", 
+            "keyColor": "blue", 
+            "temp": true 
+        },
+        { 
+            "type": "memory", 
+            "key": " 󰑭 RAM   ", 
+            "keyColor": "cyan",
+            "format": "{1} / {2} ({3})"
+        },
+        { 
+            "type": "disk", 
+            "key": " 󰋊 DISK  ", 
+            "keyColor": "yellow",
+            "format": "{1} / {2} ({9})"
+        },
+        { 
+            "type": "battery", 
+            "key": " 󰁹 BATT  ", 
+            "keyColor": "red",
+            "format": "{4} {5}" 
+        },
+        { "type": "custom", "format": "┠──────────────────────────────────┨" },
+        { "type": "weather", "key": " 󰖐 SKY   ", "keyColor": "blue", "outputColor": "white" },
+        { "type": "media", "key": " 󰝚 MUSIC ", "keyColor": "magenta" },
+        { "type": "localip", "key": " 󰩟 LAN IP", "keyColor": "cyan", "showIpv6": false },
+        { "type": "custom", "format": "┖──────────────────────────────────⚬" },
+        "break",
+        { "type": "colors", "symbol": "circle", "block": { "width": 2 } }
+    ]
+}
