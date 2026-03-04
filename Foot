@@ -1,6 +1,8 @@
-/home/czarek/.config/foot/foot.ini                    
+[main]
+font=monospace:size=15
+
 
 [colors]
-alpha=0.8
-background=311540
-foreground=BD8FFF
+alpha=0.7
+background=15161e
+foreground=33FFFF
