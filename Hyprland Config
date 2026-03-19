@@ -256,7 +256,7 @@ bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, M, fullscreen, 0
 bind = $mainMod, F, fullscreen, 1
-bind = SHIFT, Print, exec, grim -g "$(slurp)" ~/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png
+bind = $mainMod, Print, exec, bash -c 'grim -g "$(slurp)" ~/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png'
 
 
 
