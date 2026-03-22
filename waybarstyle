@@ -1,19 +1,21 @@
-                                                                               /home/czarek/.config/waybar/style.css                                                                                               
+                                                                                                                                                                                                                                                                                    /home/czarek/.config/waybar/style.css                                                                                                                                                                                                                                                                                                    
 /* Palette: Catppuccin Macchiato */
-@define-color base   #24273a;
-@define-color blue   #8aadf4;
-@define-color cyan   #91d7e3;
-@define-color green  #a6da95;
-@define-color magenta #c6a0f6;
-@define-color pink   #f5bde6;
-@define-color red    #ed8796;
-@define-color yellow #eed49f;
-@define-color text   #cad3f5;
+@define-color base     #24273a;
+@define-color blue     #8aadf4;
+@define-color cyan     #91d7e3;
+@define-color green    #a6da95;
+@define-color magenta  #c6a0f6;
+@define-color pink     #f5bde6;
+@define-color red      #ed8796;
+@define-color yellow   #eed49f;
+@define-color peach    #f5a275;
+@define-color text     #cad3f5;
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
     font-size: 14px;
     border: none;
+    border-radius: 0;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
@@ -21,73 +23,69 @@ window#waybar {
     background: transparent;
 }
 
-/* Styl kapsuł z efektem szkła (Glassmorphism) */
-.modules-left, .modules-center, .modules-right {
-    background: alpha(@base, 0.85);
-    border-radius: 20px;
-    padding: 2px 18px;
-    margin: 5px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+/* STYL PIGUŁEK */
+#custom-arch,
+#workspaces,
+#mpris,
+#custom-weather,
+#cpu,
+#temperature,
+#memory,
+#pulseaudio,
+#network,
+#custom-updates,
+#custom-myclock,
+#custom-power {
+    background: alpha(@base, 0.8);
+    color: @text;
+    border-radius: 16px;
+    padding: 2px 12px;
+    margin: 4px 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Kolorowe neonowe krawędzie */
-.modules-left   { border: 2px solid @cyan; }
-.modules-center { border: 2px solid @magenta; }
-.modules-right  { border: 2px solid @green; }
-
-/* LEWA SEKCJA */
 #custom-arch {
     color: @cyan;
-    font-size: 24px;
-    padding-right: 15px;
-    text-shadow: 0 0 10px alpha(@cyan, 0.6);
+    font-size: 18px;
 }
 
 #workspaces button {
     color: @pink;
-    padding: 0 8px;
-    transition: all 0.3s ease;
+    padding: 0 6px;
 }
 
 #workspaces button.active {
     color: #ffffff;
-    text-shadow: 0 0 8px @pink;
+    background: alpha(@pink, 0.2);
+    border-radius: 12px;
 }
 
 #mpris {
     color: @magenta;
-    font-style: italic;
-    margin-left: 10px;
-}
-
-/* ŚRODKOWA SEKCJA */
-#custom-myclock {
-    color: #ffffff;
-    font-weight: 800;
 }
 
 #custom-weather {
     color: @blue;
-    margin-left: 15px;
 }
 
-/* PRAWA SEKCJA */
-#cpu            { color: @green; padding: 0 10px; }
-#temperature    { color: @yellow; padding: 0 10px; }
-#memory         { color: @pink; padding: 0 10px; }
-#pulseaudio     { color: @cyan; padding: 0 10px; }
-#network        { color: @blue; padding: 0 10px; }
+#cpu { color: @green; }
+#temperature { color: @yellow; }
+#memory { color: @pink; }
+#pulseaudio { color: @cyan; }
+#network { color: @blue; }
+#custom-updates { color: @peach; }
+#custom-myclock { color: #ffffff; }
+#custom-power { color: @red; }
 
-#custom-power {
-    color: @red;
-    font-size: 18px;
-    padding-left: 15px;
-    text-shadow: 0 0 10px alpha(@red, 0.6);
-}
-
-/* Animacja Hovera dla przycisku Power */
+/* INTERAKCJE */
+#custom-arch:hover,
+#mpris:hover,
+#custom-weather:hover,
+#custom-updates:hover,
 #custom-power:hover {
-    color: #ffffff;
-    background: alpha(@red, 0.3);
-    border-radius: 50%;
+    background: alpha(@text, 0.2);
+}
+
+.modules-left, .modules-center, .modules-right {
+    background: transparent;
 }
