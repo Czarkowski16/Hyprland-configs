@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                                                    /home/czarek/.config/waybar/style.css                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                              /home/czarek/.config/waybar/style.css                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 /* Palette: Catppuccin Macchiato */
 @define-color base     #24273a;
 @define-color blue     #8aadf4;
@@ -49,16 +49,34 @@ window#waybar {
     font-size: 18px;
 }
 
+/* --- POPRAWIONE WORKSPACES --- */
+#workspaces {
+    padding: 0 4px; /* Mniejszy padding dla pigułki, żeby przyciski były wewnątrz */
+}
+
 #workspaces button {
     color: @pink;
-    padding: 0 6px;
+    padding: 0 8px;
+    margin: 3px 0;
+    transition: all 0.3s ease; /* Płynne przejście kolorów */
 }
 
 #workspaces button.active {
     color: #ffffff;
-    background: alpha(@pink, 0.2);
+    background: alpha(@pink, 0.4); /* Nieco mocniejsze podświetlenie */
     border-radius: 12px;
 }
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#workspaces button:hover {
+    background: alpha(@text, 0.1);
+    color: @text;
+    border-radius: 12px;
+}
+/* ---------------------------- */
 
 #mpris {
     color: @magenta;
