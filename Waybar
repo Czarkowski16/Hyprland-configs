@@ -1,4 +1,4 @@
-                                                                                                                                                                                                 /home/czarek/.config/waybar/config                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                /home/czarek/.config/waybar/config                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 {
     "layer": "top",
     "position": "top",
@@ -19,12 +19,26 @@
     },
 
     "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "warp-on-scroll": false,
         "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "urgent": "",
             "active": "󰮯",
             "default": "󰊠"
-        }
+        },
+        "persistent-workspaces": {
+            "*": 5 // Zawsze pokazuje pulpity 1-5, nawet jeśli są puste
+
+    },
+
     },
 
     "mpris": {
